@@ -167,9 +167,10 @@ button{
 
 body{
     background: $black;
+    position: relative;
     padding: 0px 46px;
     height: 100vh;
-    min-height: 540px;
+    min-height: 800px;
     overflow-y: scroll;
     
     &::-webkit-scrollbar {
@@ -240,7 +241,7 @@ body{
     }
 
     main{
-        height: calc(100% - 192px);
+        height: calc(100% - 50px);
 
         .logo{
             gap:52px;
@@ -269,10 +270,13 @@ body{
             }
 
             .developer{
-                position: relative;
                 color:$white;
+                top:0;
+                left: -218px;
+                transform-origin: right;
 
                 &::after{
+                    position: absolute;
                     background: $white;
                 }
 
@@ -283,6 +287,9 @@ body{
 
             .frontend{
                 color: $black;
+                bottom:0;
+                right: 0;
+                transform-origin: right;
 
                 &::after{
                     background: $black;
@@ -292,20 +299,28 @@ body{
                     transform: rotate(90deg);
                 }
             }
+
+            .black-circuit{
+                top:0;
+            }
+
+            .blue-circuit{
+                bottom:0;
+            }
         }
     }
 
-    footer{
-        height: 50px;
-        width: 100%;
-        text-align: center;
+    // footer{
+    //     height: 50px;
+    //     width: 100%;
+    //     text-align: center;
 
-        a{
-            background: $primaryBlue;
-            padding:10px;
-            border-radius:10px
-        }
-    }
+    //     a{
+    //         background: $primaryBlue;
+    //         padding:10px;
+    //         border-radius:10px
+    //     }
+    // }
     
 }
 

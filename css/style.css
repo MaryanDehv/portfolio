@@ -154,9 +154,10 @@ button.split-colour .blue {
 
 body {
   background: #0E0E14;
+  position: relative;
   padding: 0px 46px;
   height: 100vh;
-  min-height: 540px;
+  min-height: 800px;
   overflow-y: scroll;
 }
 body::-webkit-scrollbar {
@@ -218,7 +219,7 @@ body nav ul:after {
   bottom: 0;
 }
 body main {
-  height: calc(100% - 192px);
+  height: calc(100% - 50px);
 }
 body main .logo {
   gap: 52px;
@@ -243,10 +244,13 @@ body main .text-decor .developer::after, body main .text-decor .frontend::after 
   left: -80px;
 }
 body main .text-decor .developer {
-  position: relative;
   color: #FFFFFF;
+  top: 0;
+  left: -218px;
+  transform-origin: right;
 }
 body main .text-decor .developer::after {
+  position: absolute;
   background: #FFFFFF;
 }
 body main .text-decor .developer:after, body main .text-decor .developer {
@@ -254,6 +258,9 @@ body main .text-decor .developer:after, body main .text-decor .developer {
 }
 body main .text-decor .frontend {
   color: #0E0E14;
+  bottom: 0;
+  right: 0;
+  transform-origin: right;
 }
 body main .text-decor .frontend::after {
   background: #0E0E14;
@@ -261,15 +268,11 @@ body main .text-decor .frontend::after {
 body main .text-decor .frontend:after, body main .text-decor .frontend {
   transform: rotate(90deg);
 }
-body footer {
-  height: 50px;
-  width: 100%;
-  text-align: center;
+body main .text-decor .black-circuit {
+  top: 0;
 }
-body footer a {
-  background: #3EC6AC;
-  padding: 10px;
-  border-radius: 10px;
+body main .text-decor .blue-circuit {
+  bottom: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
