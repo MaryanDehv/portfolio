@@ -116,7 +116,7 @@ table {
 }
 
 @media only screen and (min-width:1023px) {
-    .mobile-image , .hamburger-icon{
+    .mobile-image , .hamburger-icon , .mobile-circuit{
         display: none;
     }
 }
@@ -202,6 +202,7 @@ body{
         .hamburger-icon{
             width: 31px;
             height: 100%;
+            cursor: pointer;
         }
 
         ul{
@@ -213,6 +214,7 @@ body{
             li{
                 width: fit-content;
                 padding: 0px 31px;
+                cursor: pointer;
             }
 
             li.selected{
@@ -240,9 +242,25 @@ body{
         }
     }
 
-    main{
-        height: calc(100% - 50px);
+    .mobile-circuit{
+        height: 287px;
+        width: calc(100% + 92px);
+        position: relative;
+        left: -46px;
 
+         object{
+            position: absolute;
+            bottom: 0;
+         }
+    }
+
+    main{
+        height: calc(100% - 90px);
+        padding: 20px 0px;
+
+        @media only screen and (max-width:1023px){
+            height: calc(100% - 700px);
+        }
         .logo{
             gap:52px;
             width: 50%;
@@ -258,6 +276,7 @@ body{
             .developer , .frontend{
                 text-transform: uppercase;
                 font-size: 45px;
+                font-weight: 600;
 
                 &::after{
                     content:'';
@@ -271,7 +290,7 @@ body{
 
             .developer{
                 color:$white;
-                top:0;
+                top:48px;
                 left: -218px;
                 transform-origin: right;
 
@@ -287,8 +306,8 @@ body{
 
             .frontend{
                 color: $black;
-                bottom:0;
-                right: 0;
+                bottom:48px;
+                right: 20px;
                 transform-origin: right;
 
                 &::after{
@@ -309,18 +328,5 @@ body{
             }
         }
     }
-
-    // footer{
-    //     height: 50px;
-    //     width: 100%;
-    //     text-align: center;
-
-    //     a{
-    //         background: $primaryBlue;
-    //         padding:10px;
-    //         border-radius:10px
-    //     }
-    // }
-    
 }
 

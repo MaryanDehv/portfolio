@@ -111,7 +111,7 @@ table {
 }
 
 @media only screen and (min-width: 1023px) {
-  .mobile-image, .hamburger-icon {
+  .mobile-image, .hamburger-icon, .mobile-circuit {
     display: none;
   }
 }
@@ -186,6 +186,7 @@ body nav {
 body nav .hamburger-icon {
   width: 31px;
   height: 100%;
+  cursor: pointer;
 }
 body nav ul {
   color: #FFFFFF;
@@ -196,6 +197,7 @@ body nav ul {
 body nav ul li {
   width: fit-content;
   padding: 0px 31px;
+  cursor: pointer;
 }
 body nav ul li.selected {
   position: relative;
@@ -218,8 +220,24 @@ body nav ul:after {
   width: 100%;
   bottom: 0;
 }
+body .mobile-circuit {
+  height: 287px;
+  width: calc(100% + 92px);
+  position: relative;
+  left: -46px;
+}
+body .mobile-circuit object {
+  position: absolute;
+  bottom: 0;
+}
 body main {
-  height: calc(100% - 50px);
+  height: calc(100% - 90px);
+  padding: 20px 0px;
+}
+@media only screen and (max-width: 1023px) {
+  body main {
+    height: calc(100% - 700px);
+  }
 }
 body main .logo {
   gap: 52px;
@@ -234,6 +252,7 @@ body main .text-decor {
 body main .text-decor .developer, body main .text-decor .frontend {
   text-transform: uppercase;
   font-size: 45px;
+  font-weight: 600;
 }
 body main .text-decor .developer::after, body main .text-decor .frontend::after {
   content: "";
@@ -245,7 +264,7 @@ body main .text-decor .developer::after, body main .text-decor .frontend::after 
 }
 body main .text-decor .developer {
   color: #FFFFFF;
-  top: 0;
+  top: 48px;
   left: -218px;
   transform-origin: right;
 }
@@ -258,8 +277,8 @@ body main .text-decor .developer:after, body main .text-decor .developer {
 }
 body main .text-decor .frontend {
   color: #0E0E14;
-  bottom: 0;
-  right: 0;
+  bottom: 48px;
+  right: 20px;
   transform-origin: right;
 }
 body main .text-decor .frontend::after {
