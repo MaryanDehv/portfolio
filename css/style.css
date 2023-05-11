@@ -110,7 +110,7 @@ table {
   font-weight: 500;
 }
 
-@media only screen and (min-width: 1023px) {
+@media only screen and (min-width: 1025px) {
   .mobile-image, .hamburger-icon, .mobile-circuit {
     display: none;
   }
@@ -167,7 +167,7 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-@media only screen and (min-width: 1023px) {
+@media only screen and (min-width: 1025px) {
   body:after {
     content: "";
     position: absolute;
