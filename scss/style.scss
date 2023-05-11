@@ -111,6 +111,33 @@ table {
     text-transform: uppercase;
 }
 
+.bold{
+    font-weight: 500;
+}
+
+@media only screen and (min-width:1023px) {
+    .mobile-image , .hamburger-icon{
+        display: none;
+    }
+}
+
+@media only screen and (max-width:1024px) {
+    .desktop-image , .text-decor , nav ul{
+        display: none !important;
+    }
+
+    body::after{
+        content:'';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top:0;
+        left: 0;
+        background-image: url('../images/role-tile-mobile-circuit.svg');
+        background-size: cover;
+    }
+}
+
 button{
     border:solid 1px $white; 
     width:146px;
@@ -145,15 +172,13 @@ body{
     min-height: 540px;
     overflow-y: scroll;
     
-    /* Hide scrollbar for Chrome, Safari and Opera */
     &::-webkit-scrollbar {
         display: none;
     }
     
-    /* Hide scrollbar for IE, Edge and Firefox */
     & {
-        -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;  /* Firefox */
+        -ms-overflow-style: none;
+        scrollbar-width: none;
     }
 
     @media only screen and (min-width:1023px){
@@ -172,6 +197,11 @@ body{
     nav{
         height: 50px;
         width: 100%;
+
+        .hamburger-icon{
+            width: 31px;
+            height: 100%;
+        }
 
         ul{
             color: $white;
@@ -269,6 +299,12 @@ body{
         height: 50px;
         width: 100%;
         text-align: center;
+
+        a{
+            background: $primaryBlue;
+            padding:10px;
+            border-radius:10px
+        }
     }
     
 }

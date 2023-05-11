@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.4 12.11">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #3ec6ac;
+        transform: rotate(-45deg);
+      }
+
+      .cls-1, .cls-2 {
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+        transform-origin: bottom;
+        animation: rotate 0.5s forwards;
+      }
+
+      .cls-2 {
+        fill: #0e0e14;
+        stroke: #fff;
+        transform: rotate(45deg);
+      }
+
+      @keyframes rotate{
+        to{
+            transform: rotate(0deg);
+        }
+      }
+
+
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <line class="cls-1" x1="11.34" y1="1.06" x2="1.44" y2="10.96"/>
+    <line class="cls-2" x1="1.06" y1="1.16" x2="10.96" y2="11.05"/>
+  </g>
+</svg>
