@@ -1,0 +1,244 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: "Open Sans", sans-serif;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.v-center {
+  align-items: center;
+}
+
+.h-center {
+  justify-content: center;
+}
+
+.v-h-center {
+  flex-wrap: wrap;
+  place-content: center;
+}
+
+.main-blue-text {
+  color: #3EC6AC;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.v-h-center-position {
+  margin: auto;
+  inset: 0;
+}
+
+.h-center-position {
+  left: 0;
+  right: 0;
+  margin: 0px auto;
+}
+
+.v-center-position {
+  bottom: 0;
+  top: 0;
+  margin: auto 0px;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+button {
+  border: solid 1px #FFFFFF;
+  width: 146px;
+  height: 46px;
+}
+button.split-colour > * {
+  top: 0;
+  font-size: 20px;
+}
+button.split-colour .black {
+  background: #0E0E14;
+  width: 50%;
+  right: 0;
+  color: #FFFFFF;
+}
+button.split-colour .blue {
+  background: #3EC6AC;
+  width: 50%;
+  left: 0;
+  color: #0E0E14;
+}
+
+body {
+  background: #0E0E14;
+  padding: 0px 46px;
+  height: 100vh;
+  min-height: 540px;
+  overflow-y: scroll;
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  /* Hide scrollbar for IE, Edge and Firefox */
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+@media only screen and (min-width: 1023px) {
+  body:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: #3EC6AC;
+    width: 50%;
+    z-index: -1;
+  }
+}
+body nav {
+  height: 50px;
+  width: 100%;
+}
+body nav ul {
+  color: #FFFFFF;
+  width: fit-content;
+  font-size: 13px;
+  position: relative;
+}
+body nav ul li {
+  width: fit-content;
+  padding: 0px 31px;
+}
+body nav ul li.selected {
+  position: relative;
+}
+body nav ul li.selected:after {
+  content: "";
+  position: absolute;
+  background: #3EC6AC;
+  height: 2px;
+  left: 0;
+  width: 100%;
+  bottom: -18px;
+  z-index: 1;
+}
+body nav ul:after {
+  content: "";
+  position: absolute;
+  background: #323237;
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+}
+body main {
+  height: calc(100% - 192px);
+}
+body main .logo {
+  gap: 52px;
+  width: 50%;
+}
+body main .logo > div {
+  gap: 11px;
+}
+body main .text-decor {
+  width: 25%;
+}
+body main .text-decor .developer, body main .text-decor .frontend {
+  text-transform: uppercase;
+  font-size: 45px;
+}
+body main .text-decor .developer::after, body main .text-decor .frontend::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 105px;
+  bottom: -27px;
+  left: -80px;
+}
+body main .text-decor .developer {
+  position: relative;
+  color: #FFFFFF;
+}
+body main .text-decor .developer::after {
+  background: #FFFFFF;
+}
+body main .text-decor .developer:after, body main .text-decor .developer {
+  transform: rotate(-90deg);
+}
+body main .text-decor .frontend {
+  color: #0E0E14;
+}
+body main .text-decor .frontend::after {
+  background: #0E0E14;
+}
+body main .text-decor .frontend:after, body main .text-decor .frontend {
+  transform: rotate(90deg);
+}
+body footer {
+  height: 50px;
+  width: 100%;
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */
