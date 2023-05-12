@@ -5,6 +5,12 @@ nav {
 nav .nav-icons {
   height: 100%;
 }
+nav .nav-icons > div {
+  cursor: pointer;
+}
+nav .nav-icons object {
+  pointer-events: none;
+}
 nav .nav-icons .close-icon {
   display: none;
   width: 23px;
@@ -311,15 +317,17 @@ body main {
     left: 0;
     background-image: url("images/role-tile-mobile-circuit.svg");
     background-size: cover;
+    z-index: -1;
   }
-  nav.mobile-nav-open .nav-icons .close-icon {
+  [data-mobile-nav=true] .nav-icons .close-icon {
     display: block;
     z-index: 1;
   }
-  nav.mobile-nav-open .nav-icons .hamburger-icon {
+  [data-mobile-nav=true] .nav-icons .hamburger-icon {
     display: none;
   }
-  nav.mobile-nav-open ul {
+  [data-mobile-nav=true] ul {
+    min-height: 760px;
     position: absolute;
     top: 0;
     width: 100%;
@@ -335,8 +343,11 @@ body main {
     place-content: center;
     font-size: 18px;
   }
-  nav.mobile-nav-open ul li:after {
+  [data-mobile-nav=true] ul li:after {
     display: none;
+  }
+  [data-mobile-nav=true] .mobile-circuit {
+    z-index: 1;
   }
 }
 @media only screen and (min-width: 475px) {

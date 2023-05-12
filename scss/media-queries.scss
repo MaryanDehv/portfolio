@@ -18,40 +18,45 @@
         left: 0;
         background-image: url('images/role-tile-mobile-circuit.svg');
         background-size: cover;
+        z-index: -1;
     }
 
-    nav{
-        &.mobile-nav-open{
-            .nav-icons{
-                .close-icon{
-                    display: block;
-                    z-index: 1;
-                }
-            
-                .hamburger-icon{
-                    display: none;
-                }
-            }
-            ul{
-                position: absolute;
-                top: 0;
-                width: 100%;
-                display: flex !important;
-                height: 100%;
-                flex-direction: column;
-                flex-wrap: wrap;
-                background: $black;
-                background-image: url('images/logo-tile-mobile-circuit.svg');
-                left: 0;
+   
+    [data-mobile-nav="true"]{
+        .nav-icons{
+            .close-icon{
+                display: block;
                 z-index: 1;
-                gap:39px;
-                place-content: center;
-                font-size: 18px;
-    
-                li:after{
-                    display: none;
-                }
             }
+        
+            .hamburger-icon{
+                display: none;
+            }
+        }
+        ul{
+            min-height: 760px;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            display: flex !important;
+            height: 100%;
+            flex-direction: column;
+            flex-wrap: wrap;
+            background: $black;
+            background-image: url('images/logo-tile-mobile-circuit.svg');
+            left: 0;
+            z-index: 1;
+            gap:39px;
+            place-content: center;
+            font-size: 18px;
+
+            li:after{
+                display: none;
+            }
+        }
+
+        .mobile-circuit{
+            z-index: 1;
         }
     }
 }

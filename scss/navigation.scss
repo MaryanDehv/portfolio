@@ -5,6 +5,14 @@ nav{
     .nav-icons{
         height: 100%;
 
+        >div{
+            cursor: pointer;
+        }
+
+        object{
+            pointer-events: none;
+        }
+
         .close-icon{
             display: none;
             width: 23px;
