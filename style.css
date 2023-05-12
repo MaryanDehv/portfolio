@@ -1,51 +1,49 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font-family: "Open Sans", sans-serif;
-  vertical-align: baseline;
+nav {
+  height: 50px;
+  width: 100%;
 }
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+nav .nav-icons {
+  height: 100%;
+}
+nav .nav-icons .close-icon {
+  display: none;
+  width: 23px;
+}
+nav .nav-icons .hamburger-icon {
   display: block;
+  width: 31px;
 }
-
-body {
-  line-height: 1;
+nav ul {
+  color: #FFFFFF;
+  width: fit-content;
+  font-size: 13px;
+  position: relative;
 }
-
-ol, ul {
-  list-style: none;
+nav ul li {
+  width: fit-content;
+  padding: 0px 31px;
+  cursor: pointer;
 }
-
-blockquote, q {
-  quotes: none;
+nav ul li.selected {
+  position: relative;
 }
-
-blockquote:before, blockquote:after,
-q:before, q:after {
+nav ul li.selected:after {
   content: "";
-  content: none;
+  position: absolute;
+  background: #3EC6AC;
+  height: 2px;
+  left: 0;
+  width: 100%;
+  bottom: -18px;
+  z-index: 1;
 }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+nav ul:after {
+  content: "";
+  position: absolute;
+  background: #323237;
+  height: 2px;
+  width: 100%;
+  bottom: 0;
 }
 
 .flex {
@@ -110,31 +108,6 @@ table {
   font-weight: 500;
 }
 
-@media only screen and (min-width: 1025px) {
-  .mobile-image, .hamburger-icon {
-    display: none;
-  }
-}
-@media only screen and (min-width: 475px) {
-  .mobile-circuit {
-    display: none;
-  }
-}
-@media only screen and (max-width: 1024px) {
-  .desktop-image, .text-decor, nav ul {
-    display: none !important;
-  }
-  body::after {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-image: url("images/role-tile-mobile-circuit.svg");
-    background-size: cover;
-  }
-}
 button {
   border: solid 1px #FFFFFF;
   width: 146px;
@@ -177,6 +150,112 @@ button.split-colour .blue {
   color: #0E0E14;
 }
 
+.logo {
+  gap: 52px;
+  width: 50%;
+}
+.logo > div {
+  gap: 11px;
+}
+.logo p, .logo .desktop-image {
+  position: relative;
+  left: -14px;
+}
+
+.text-decor {
+  width: 25%;
+}
+.text-decor .developer, .text-decor .frontend {
+  text-transform: uppercase;
+  font-size: 45px;
+  font-weight: 600;
+}
+.text-decor .developer {
+  color: #FFFFFF;
+  top: 48px;
+  left: -218px;
+  transform-origin: right;
+}
+.text-decor .developer {
+  transform: rotate(-90deg);
+}
+.text-decor .frontend {
+  color: #0E0E14;
+  bottom: 48px;
+  right: 20px;
+  transform-origin: right;
+}
+.text-decor .frontend {
+  transform: rotate(90deg);
+}
+.text-decor .black-circuit {
+  top: 0;
+}
+.text-decor .blue-circuit {
+  bottom: 0;
+}
+
+.mobile-circuit {
+  height: 287px;
+  width: calc(100% + 92px);
+  position: relative;
+  left: -46px;
+}
+.mobile-circuit object {
+  position: absolute;
+  bottom: 0;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: "Open Sans", sans-serif;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 body {
   background: #0E0E14;
   position: relative;
@@ -209,108 +288,66 @@ body {
     z-index: -1;
   }
 }
-body nav {
-  height: 50px;
-  width: 100%;
-}
-body nav .hamburger-icon {
-  width: 31px;
-  height: 100%;
-  cursor: pointer;
-}
-body nav ul {
-  color: #FFFFFF;
-  width: fit-content;
-  font-size: 13px;
-  position: relative;
-}
-body nav ul li {
-  width: fit-content;
-  padding: 0px 31px;
-  cursor: pointer;
-}
-body nav ul li.selected {
-  position: relative;
-}
-body nav ul li.selected:after {
-  content: "";
-  position: absolute;
-  background: #3EC6AC;
-  height: 2px;
-  left: 0;
-  width: 100%;
-  bottom: -18px;
-  z-index: 1;
-}
-body nav ul:after {
-  content: "";
-  position: absolute;
-  background: #323237;
-  height: 2px;
-  width: 100%;
-  bottom: 0;
-}
-body .mobile-circuit {
-  height: 287px;
-  width: calc(100% + 92px);
-  position: relative;
-  left: -46px;
-}
-body .mobile-circuit object {
-  position: absolute;
-  bottom: 0;
-}
 body main {
   height: calc(100% - 90px);
   padding: 20px 0px;
+}
+
+@media only screen and (min-width: 1025px) {
+  .mobile-image, .nav-icons {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .desktop-image, .text-decor, nav ul {
+    display: none !important;
+  }
+  body::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-image: url("images/role-tile-mobile-circuit.svg");
+    background-size: cover;
+  }
+  nav.mobile-nav-open .nav-icons .close-icon {
+    display: block;
+    z-index: 1;
+  }
+  nav.mobile-nav-open .nav-icons .hamburger-icon {
+    display: none;
+  }
+  nav.mobile-nav-open ul {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex !important;
+    height: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background: #0E0E14;
+    background-image: url("images/logo-tile-mobile-circuit.svg");
+    left: 0;
+    z-index: 1;
+    gap: 39px;
+    place-content: center;
+    font-size: 18px;
+  }
+  nav.mobile-nav-open ul li:after {
+    display: none;
+  }
+}
+@media only screen and (min-width: 475px) {
+  .mobile-circuit {
+    display: none;
+  }
 }
 @media only screen and (max-width: 474px) {
   body main {
     height: calc(100% - 700px);
   }
-}
-body main .logo {
-  gap: 52px;
-  width: 50%;
-}
-body main .logo > div {
-  gap: 11px;
-}
-body main .logo p, body main .logo .desktop-image {
-  position: relative;
-  left: -14px;
-}
-body main .text-decor {
-  width: 25%;
-}
-body main .text-decor .developer, body main .text-decor .frontend {
-  text-transform: uppercase;
-  font-size: 45px;
-  font-weight: 600;
-}
-body main .text-decor .developer {
-  color: #FFFFFF;
-  top: 48px;
-  left: -218px;
-  transform-origin: right;
-}
-body main .text-decor .developer {
-  transform: rotate(-90deg);
-}
-body main .text-decor .frontend {
-  color: #0E0E14;
-  bottom: 48px;
-  right: 20px;
-  transform-origin: right;
-}
-body main .text-decor .frontend {
-  transform: rotate(90deg);
-}
-body main .text-decor .black-circuit {
-  top: 0;
-}
-body main .text-decor .blue-circuit {
-  bottom: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

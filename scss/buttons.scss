@@ -1,0 +1,54 @@
+button{
+    border:solid 1px $white; 
+    width:146px;
+    height: 46px;
+    cursor: pointer;
+
+    .black , .blue{
+        transition: background 0.2s ease-out;
+    }
+
+    &:hover{
+        &.split-colour{
+            >*{
+                top:0;
+                font-size: 20px;
+            }
+    
+            .black{
+                background: $primaryBlue;
+                width: 50%;
+                right: 0;
+                color:$black;
+            }
+    
+            .blue{
+                background: $black;
+                width: 50%;
+                left: 0;
+                color:$primaryBlue;
+            }
+        }
+    }
+
+    &.split-colour{
+        >*{
+            top:0;
+            font-size: 20px;
+        }
+
+        .black{
+            background: $black;
+            width: 50%;
+            right: 0;
+            color: $white;
+        }
+
+        .blue{
+            background: $primaryBlue;
+            width: 50%;
+            left: 0;
+            color:$black;
+        }
+    }
+}

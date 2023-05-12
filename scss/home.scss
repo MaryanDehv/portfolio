@@ -1,0 +1,66 @@
+.logo{
+    gap:52px;
+    width: 50%;
+
+    >div{
+        gap:11px
+    }
+    
+    p , .desktop-image{
+        position: relative;
+        left: -14px;
+    }
+}
+
+.text-decor{
+    width: 25%;
+
+    .developer , .frontend{
+        text-transform: uppercase;
+        font-size: 45px;
+        font-weight: 600;
+    }
+
+    .developer{
+        color:$white;
+        top:48px;
+        left: -218px;
+        transform-origin: right;
+
+        &{
+            transform: rotate(-90deg);
+        }
+    }
+
+    .frontend{
+        color: $black;
+        bottom:48px;
+        right: 20px;
+        transform-origin: right;
+
+         &{
+            transform: rotate(90deg);
+        }
+    }
+
+    .black-circuit{
+        top:0;
+    }
+
+    .blue-circuit{
+        bottom:0;
+    }
+}
+
+
+.mobile-circuit{
+    height: 287px;
+    width: calc(100% + 92px);
+    position: relative;
+    left: -46px;
+
+     object{
+        position: absolute;
+        bottom: 0;
+     }
+}

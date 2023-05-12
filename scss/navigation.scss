@@ -1,0 +1,54 @@
+nav{
+    height: 50px;
+    width: 100%;
+
+    .nav-icons{
+        height: 100%;
+
+        .close-icon{
+            display: none;
+            width: 23px;
+        }
+    
+        .hamburger-icon{
+            display: block;
+            width: 31px;
+        }
+    }
+
+    ul{
+        color: $white;
+        width: fit-content;
+        font-size: 13px;
+        position: relative;
+
+        li{
+            width: fit-content;
+            padding: 0px 31px;
+            cursor: pointer;
+        }
+
+        li.selected{
+            position: relative;
+            &:after{
+                content: '';
+                position: absolute;
+                background: $primaryBlue;
+                height: 2px;
+                left: 0;
+                width: 100%;
+                bottom: -18px;
+                z-index: 1;
+            }
+        }
+
+        &:after{
+            content: '';
+            position: absolute;
+            background: $gray;
+            height: 2px;
+            width: 100%;
+            bottom: 0;
+        }
+    }
+}

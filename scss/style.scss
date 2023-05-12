@@ -1,9 +1,11 @@
-// main colors
-$primaryBlue: #3EC6AC;
-$secondaryBlue: #134D5D;
-$black: #0E0E14;
-$white: #FFFFFF;
-$gray: #323237;
+
+@import 'colors.scss';
+@import 'navigation.scss';
+@import 'helpers.scss';
+@import 'buttons.scss';
+@import 'home.scss';
+
+
 
 
 // reset styles 
@@ -27,177 +29,37 @@ time, mark, audio, video {
 	font-family: 'Open Sans', sans-serif;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
+
 ol, ul {
 	list-style: none;
 }
+
 blockquote, q {
 	quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
 
-
-// helpers 
-.flex{
-    display: flex;
-}
-
-.column{
-    flex-direction: column;
-}
-
-.v-center{
-    align-items: center;
-}
-
-.h-center{
-    justify-content: center;
-}
-
-.v-h-center{
-    flex-wrap: wrap;
-    place-content: center;
-}
-
-.main-blue-text{
-    color: $primaryBlue;
-}
-
-.relative{
-    position: relative;
-}
-
-.absolute{
-    position: absolute;
-}
-
-.v-h-center-position{
-    margin: auto;
-    inset: 0;
-}
-
-.h-center-position{
-    left: 0;
-    right: 0;
-    margin: 0px auto;
-}
-
-.v-center-position{
-    bottom: 0;
-    top: 0;
-    margin: auto 0px;
-}
-
-.full-height{
-    height: 100%;
-}
-
-.uppercase{
-    text-transform: uppercase;
-}
-
-.bold{
-    font-weight: 500;
-}
-
-@media only screen and (min-width:1025px) {
-    .mobile-image , .hamburger-icon{
-        display: none;
-    }
-}
-
-@media only screen and (min-width: 475px){
-    .mobile-circuit{
-        display: none;
-    }
-}
-
-@media only screen and (max-width:1024px) {
-    .desktop-image , .text-decor , nav ul{
-        display: none !important;
-    }
-
-    body::after{
-        content:'';
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        top:0;
-        left: 0;
-        background-image: url('images/role-tile-mobile-circuit.svg');
-        background-size: cover;
-    }
-}
-
-button{
-    border:solid 1px $white; 
-    width:146px;
-    height: 46px;
-    cursor: pointer;
-
-    .black , .blue{
-        transition: background 0.2s ease-out;
-    }
-
-    &:hover{
-        &.split-colour{
-            >*{
-                top:0;
-                font-size: 20px;
-            }
-    
-            .black{
-                background: $primaryBlue;
-                width: 50%;
-                right: 0;
-                color:$black;
-            }
-    
-            .blue{
-                background: $black;
-                width: 50%;
-                left: 0;
-                color:$primaryBlue;
-            }
-        }
-    }
-
-    &.split-colour{
-        >*{
-            top:0;
-            font-size: 20px;
-        }
-
-        .black{
-            background: $black;
-            width: 50%;
-            right: 0;
-            color: $white;
-        }
-
-        .blue{
-            background: $primaryBlue;
-            width: 50%;
-            left: 0;
-            color:$black;
-        }
-    }
-}
+// ------------------------------------
 
 body{
     background: $black;
@@ -235,126 +97,11 @@ body{
         }
     }
 
-    nav{
-        height: 50px;
-        width: 100%;
-
-        .hamburger-icon{
-            width: 31px;
-            height: 100%;
-            cursor: pointer;
-        }
-
-        ul{
-            color: $white;
-            width: fit-content;
-            font-size: 13px;
-            position: relative;
-
-            li{
-                width: fit-content;
-                padding: 0px 31px;
-                cursor: pointer;
-            }
-
-            li.selected{
-                position: relative;
-                &:after{
-                    content: '';
-                    position: absolute;
-                    background: $primaryBlue;
-                    height: 2px;
-                    left: 0;
-                    width: 100%;
-                    bottom: -18px;
-                    z-index: 1;
-                }
-            }
-
-            &:after{
-                content: '';
-                position: absolute;
-                background: $gray;
-                height: 2px;
-                width: 100%;
-                bottom: 0;
-            }
-        }
-    }
-
-    .mobile-circuit{
-        height: 287px;
-        width: calc(100% + 92px);
-        position: relative;
-        left: -46px;
-
-         object{
-            position: absolute;
-            bottom: 0;
-         }
-    }
-
     main{
         height: calc(100% - 90px);
         padding: 20px 0px;
-
-        @media only screen and (max-width:474px){
-            height: calc(100% - 700px);
-        }
-
-        .logo{
-            gap:52px;
-            width: 50%;
-
-            >div{
-                gap:11px
-            }
-            
-            p , .desktop-image{
-                position: relative;
-                left: -14px;
-            }
-        }
-
-        .text-decor{
-            width: 25%;
-
-            .developer , .frontend{
-                text-transform: uppercase;
-                font-size: 45px;
-                font-weight: 600;
-            }
-
-            .developer{
-                color:$white;
-                top:48px;
-                left: -218px;
-                transform-origin: right;
-
-                &{
-                    transform: rotate(-90deg);
-                }
-            }
-
-            .frontend{
-                color: $black;
-                bottom:48px;
-                right: 20px;
-                transform-origin: right;
-
-                 &{
-                    transform: rotate(90deg);
-                }
-            }
-
-            .black-circuit{
-                top:0;
-            }
-
-            .blue-circuit{
-                bottom:0;
-            }
-        }
     }
 }
 
+
+@import 'media-queries.scss';

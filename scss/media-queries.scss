@@ -1,0 +1,69 @@
+@media only screen and (min-width:1025px) {
+    .mobile-image , .nav-icons{
+        display: none;
+    }
+}
+
+@media only screen and (max-width:1024px) {
+    .desktop-image , .text-decor , nav ul{
+        display: none !important;
+    }
+
+    body::after{
+        content:'';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top:0;
+        left: 0;
+        background-image: url('images/role-tile-mobile-circuit.svg');
+        background-size: cover;
+    }
+
+    nav{
+        &.mobile-nav-open{
+            .nav-icons{
+                .close-icon{
+                    display: block;
+                    z-index: 1;
+                }
+            
+                .hamburger-icon{
+                    display: none;
+                }
+            }
+            ul{
+                position: absolute;
+                top: 0;
+                width: 100%;
+                display: flex !important;
+                height: 100%;
+                flex-direction: column;
+                flex-wrap: wrap;
+                background: $black;
+                background-image: url('images/logo-tile-mobile-circuit.svg');
+                left: 0;
+                z-index: 1;
+                gap:39px;
+                place-content: center;
+                font-size: 18px;
+    
+                li:after{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 475px){
+    .mobile-circuit{
+        display: none;
+    }
+}
+
+@media only screen and (max-width:474px){
+    body main{
+        height: calc(100% - 700px);
+    }
+}
