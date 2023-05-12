@@ -116,7 +116,13 @@ table {
 }
 
 @media only screen and (min-width:1025px) {
-    .mobile-image , .hamburger-icon , .mobile-circuit{
+    .mobile-image , .hamburger-icon{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 475px){
+    .mobile-circuit{
         display: none;
     }
 }
@@ -142,6 +148,34 @@ button{
     border:solid 1px $white; 
     width:146px;
     height: 46px;
+    cursor: pointer;
+
+    .black , .blue{
+        transition: background 0.2s ease-out;
+    }
+
+    &:hover{
+        &.split-colour{
+            >*{
+                top:0;
+                font-size: 20px;
+            }
+    
+            .black{
+                background: $primaryBlue;
+                width: 50%;
+                right: 0;
+                color:$black;
+            }
+    
+            .blue{
+                background: $black;
+                width: 50%;
+                left: 0;
+                color:$primaryBlue;
+            }
+        }
+    }
 
     &.split-colour{
         >*{
@@ -170,8 +204,14 @@ body{
     position: relative;
     padding: 0px 46px;
     height: 100vh;
-    min-height: 800px;
+    min-height: 640px;
     overflow-y: scroll;
+
+    .container{
+        height: 100%;
+        max-width: 1024px;
+        margin: auto;
+    }
     
     &::-webkit-scrollbar {
         display: none;
@@ -258,15 +298,21 @@ body{
         height: calc(100% - 90px);
         padding: 20px 0px;
 
-        @media only screen and (max-width:1023px){
+        @media only screen and (max-width:474px){
             height: calc(100% - 700px);
         }
+
         .logo{
             gap:52px;
             width: 50%;
 
             >div{
                 gap:11px
+            }
+            
+            p , .desktop-image{
+                position: relative;
+                left: -14px;
             }
         }
 
@@ -277,15 +323,6 @@ body{
                 text-transform: uppercase;
                 font-size: 45px;
                 font-weight: 600;
-
-                &::after{
-                    content:'';
-                    position:absolute;
-                    width: 8px;
-                    height: 105px;
-                    bottom: -27px;
-                    left: -80px;
-                }
             }
 
             .developer{
@@ -294,12 +331,7 @@ body{
                 left: -218px;
                 transform-origin: right;
 
-                &::after{
-                    position: absolute;
-                    background: $white;
-                }
-
-                &:after , &{
+                &{
                     transform: rotate(-90deg);
                 }
             }
@@ -310,11 +342,7 @@ body{
                 right: 20px;
                 transform-origin: right;
 
-                &::after{
-                    background: $black;
-                }
-
-                &:after , &{
+                 &{
                     transform: rotate(90deg);
                 }
             }

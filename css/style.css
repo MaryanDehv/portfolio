@@ -111,7 +111,12 @@ table {
 }
 
 @media only screen and (min-width: 1025px) {
-  .mobile-image, .hamburger-icon, .mobile-circuit {
+  .mobile-image, .hamburger-icon {
+    display: none;
+  }
+}
+@media only screen and (min-width: 475px) {
+  .mobile-circuit {
     display: none;
   }
 }
@@ -134,6 +139,26 @@ button {
   border: solid 1px #FFFFFF;
   width: 146px;
   height: 46px;
+  cursor: pointer;
+}
+button .black, button .blue {
+  transition: background 0.2s ease-out;
+}
+button:hover.split-colour > * {
+  top: 0;
+  font-size: 20px;
+}
+button:hover.split-colour .black {
+  background: #3EC6AC;
+  width: 50%;
+  right: 0;
+  color: #0E0E14;
+}
+button:hover.split-colour .blue {
+  background: #0E0E14;
+  width: 50%;
+  left: 0;
+  color: #3EC6AC;
 }
 button.split-colour > * {
   top: 0;
@@ -157,8 +182,13 @@ body {
   position: relative;
   padding: 0px 46px;
   height: 100vh;
-  min-height: 800px;
+  min-height: 640px;
   overflow-y: scroll;
+}
+body .container {
+  height: 100%;
+  max-width: 1024px;
+  margin: auto;
 }
 body::-webkit-scrollbar {
   display: none;
@@ -234,7 +264,7 @@ body main {
   height: calc(100% - 90px);
   padding: 20px 0px;
 }
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 474px) {
   body main {
     height: calc(100% - 700px);
   }
@@ -246,6 +276,10 @@ body main .logo {
 body main .logo > div {
   gap: 11px;
 }
+body main .logo p, body main .logo .desktop-image {
+  position: relative;
+  left: -14px;
+}
 body main .text-decor {
   width: 25%;
 }
@@ -254,25 +288,13 @@ body main .text-decor .developer, body main .text-decor .frontend {
   font-size: 45px;
   font-weight: 600;
 }
-body main .text-decor .developer::after, body main .text-decor .frontend::after {
-  content: "";
-  position: absolute;
-  width: 8px;
-  height: 105px;
-  bottom: -27px;
-  left: -80px;
-}
 body main .text-decor .developer {
   color: #FFFFFF;
   top: 48px;
   left: -218px;
   transform-origin: right;
 }
-body main .text-decor .developer::after {
-  position: absolute;
-  background: #FFFFFF;
-}
-body main .text-decor .developer:after, body main .text-decor .developer {
+body main .text-decor .developer {
   transform: rotate(-90deg);
 }
 body main .text-decor .frontend {
@@ -281,10 +303,7 @@ body main .text-decor .frontend {
   right: 20px;
   transform-origin: right;
 }
-body main .text-decor .frontend::after {
-  background: #0E0E14;
-}
-body main .text-decor .frontend:after, body main .text-decor .frontend {
+body main .text-decor .frontend {
   transform: rotate(90deg);
 }
 body main .text-decor .black-circuit {
