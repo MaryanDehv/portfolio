@@ -29,7 +29,7 @@ function writeAnimation(i , target , container , delay){
 }
 
 
-writeAnimation(0 , 'console.log("hello world")', document.querySelector('.console-message') , 250)
+writeAnimation(0 , 'console.log("hello world")', document.querySelector('.console-message') , 100)
 writeAnimation(0 , 'developer' , document.querySelector('.developer') , 200)
 writeAnimation(0 , 'frontend' , document.querySelector('.frontend') , 200)
 

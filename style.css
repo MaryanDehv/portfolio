@@ -42,6 +42,7 @@ nav ul li.selected:after {
   width: 100%;
   bottom: -18px;
   z-index: 1;
+  animation: fill 0.5s forwards;
 }
 nav ul:after {
   content: "";
@@ -50,6 +51,14 @@ nav ul:after {
   height: 2px;
   width: 100%;
   bottom: 0;
+}
+@keyframes fill {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
 .flex {
