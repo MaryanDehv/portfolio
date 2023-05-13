@@ -221,6 +221,18 @@ button.split-colour .blue {
 body.projects-page [data-mobile-nav=false] .mobile-circuit {
   display: none;
 }
+body.projects-page::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: linear-gradient(rgba(14, 14, 20, 0.9), rgba(14, 14, 20, 0.9)), url("https://images.unsplash.com/photo-1612338526108-69e35af8980d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80");
+  left: 0;
+  z-index: -10;
+}
 body.projects-page .directions {
   display: none;
 }
@@ -496,7 +508,6 @@ body {
 }
 body main {
   height: calc(100% - 90px);
-  padding: 20px 0px;
 }
 
 a {

@@ -10,8 +10,6 @@ function mobileNav(){
 
 
 mobileNav()
-const developer = 'developer';
-const frontend = 'frontend';
 
 function writeAnimation(i , target , container , delay){
    const arr = target.split('');
