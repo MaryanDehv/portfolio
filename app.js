@@ -12,6 +12,24 @@ function mobileNav(){
 mobileNav()
 
 
+function writeConsole(i){
+   const message = 'console.log("hello world")';
+   const container = document.querySelector('.console-message');
+   const arr = message.split('');
+   setTimeout(() => {
+      container.innerHTML += arr[i]
+      i++
+      if(i < arr.length){
+         writeConsole(i)
+      } else {
+         return
+      }
+   } , 100)
+}
+
+writeConsole(0)
+
+
  // portfolio deck
  function portfolioDeckEvents(){
     const directions = document.querySelectorAll('.directions > div');
@@ -20,7 +38,7 @@ mobileNav()
          direction.addEventListener('click' , (el) => {
             console.log('clicked ')
             const getCards = document.querySelectorAll('.project-card');
-            const cardsParent = document.querySelector('.projects-container');
+            const cardsParent = document.querySelector('.projects-list');
             console.log(el.currentTarget)
              if(el.currentTarget.classList.contains('next')){
                 addClasses(getCards , cardsParent)
