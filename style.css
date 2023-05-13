@@ -212,42 +212,17 @@ body.projects-page [data-mobile-nav=false] .mobile-circuit {
   display: none;
 }
 body.projects-page .directions {
-  display: flex;
-  width: 24px;
-  height: 100px;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 10px;
-  position: absolute;
-  top: 10px;
-  right: -30px;
+  display: none;
 }
-body.projects-page .directions > div {
-  width: 24px;
-  height: 32px;
-  opacity: 0.4;
-  transition: width 0.1s ease-out;
-  cursor: pointer;
-}
-body.projects-page .directions > div object {
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-body.projects-page .directions > div:hover {
-  width: 34px;
-  height: 42px;
-  opacity: 1;
-}
-body.projects-page .directions .next {
-  transform: rotate(180deg);
+body.projects-page main {
+  height: calc(100% - 50px);
 }
 body.projects-page .projects-container {
   height: 263px;
   width: 313.24px;
 }
 body.projects-page .projects-container .projects-list {
-  height: 100%;
+  gap: 10px;
   width: 100%;
 }
 body.projects-page .projects-container .project-card {
@@ -282,32 +257,82 @@ body.projects-page .projects-container .project-card .card-circuit.bottom-left {
   bottom: 0;
   right: 0;
 }
-body.projects-page .projects-container .project-card.second {
-  top: -20px;
-  left: 20px;
-  opacity: 0.8;
-  z-index: -1;
+@media only screen and (min-width: 1025px) {
+  body.projects-page .projects-container .project-card.second {
+    top: -20px;
+    left: 20px;
+    opacity: 0.8;
+    z-index: -1;
+  }
+  body.projects-page .projects-container .project-card.last {
+    top: -40px;
+    left: 40px;
+    opacity: 0.6;
+    z-index: -2;
+  }
+  body.projects-page .projects-container .project-card.second, body.projects-page .projects-container .project-card.last {
+    border: none;
+  }
+  body.projects-page .projects-container .project-card.second object, body.projects-page .projects-container .project-card.last object {
+    display: none;
+  }
+  body.projects-page .projects-container .project-card.moveback {
+    animation: moveback 0.8s forwards;
+  }
+  body.projects-page .projects-container .project-card.shiftup {
+    animation: shiftup 0.8s forwards;
+  }
+  body.projects-page .projects-container .project-card.lastshiftup {
+    animation: lastshiftup 0.8s forwards;
+  }
 }
-body.projects-page .projects-container .project-card.last {
-  top: -40px;
-  left: 40px;
-  opacity: 0.6;
-  z-index: -2;
+@media only screen and (min-width: 1025px) {
+  body.projects-page .projects-container .directions {
+    display: flex;
+    width: 24px;
+    height: 100px;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    position: absolute;
+    top: 10px;
+    right: -30px;
+  }
+  body.projects-page .projects-container .directions > div {
+    width: 24px;
+    height: 32px;
+    opacity: 0.4;
+    transition: width 0.1s ease-out;
+    cursor: pointer;
+  }
+  body.projects-page .projects-container .directions > div object {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  body.projects-page .projects-container .directions > div:hover {
+    width: 34px;
+    height: 42px;
+    opacity: 1;
+  }
+  body.projects-page .projects-container .directions .next {
+    transform: rotate(180deg);
+  }
 }
-body.projects-page .projects-container .project-card.second, body.projects-page .projects-container .project-card.last {
-  border: none;
-}
-body.projects-page .projects-container .project-card.second object, body.projects-page .projects-container .project-card.last object {
-  display: none;
-}
-body.projects-page .projects-container .project-card.moveback {
-  animation: moveback 0.8s forwards;
-}
-body.projects-page .projects-container .project-card.shiftup {
-  animation: shiftup 0.8s forwards;
-}
-body.projects-page .projects-container .project-card.lastshiftup {
-  animation: lastshiftup 0.8s forwards;
+@media only screen and (max-width: 1024px) {
+  body.projects-page .projects-container {
+    height: 100%;
+    width: 100%;
+  }
+  body.projects-page .projects-container .projects-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  body.projects-page .projects-container .project-card {
+    min-width: 230px;
+    flex: 1;
+    position: relative;
+  }
 }
 body.projects-page nav {
   display: flex;
