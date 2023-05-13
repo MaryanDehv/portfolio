@@ -2,6 +2,11 @@
     .mobile-image , .nav-icons{
         display: none;
     }
+
+    p , .desktop-image{
+        position: relative;
+        left: -14px;
+    }
 }
 
 @media only screen and (max-width:1024px) {
@@ -51,6 +56,10 @@
 
             li:after{
                 display: none;
+            }
+
+            li.selected{
+                color: $primaryBlue;
             }
 
             &:before{

@@ -10,7 +10,7 @@
 
       .cls-1, .cls-2 {
         stroke-miterlimit: 10;
-        stroke-width: 3px;
+        stroke-width: 2px;
         transform-origin: bottom;
         animation: rotate 0.5s forwards;
       }

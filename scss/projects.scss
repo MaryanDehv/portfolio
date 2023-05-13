@@ -1,0 +1,73 @@
+body.projects-page{
+    &::after{
+        display: none;
+    }
+
+    [data-mobile-nav="false"]{
+        .mobile-circuit{
+            display: none;
+        }
+    }
+
+   .projects-container{
+    height: 263px;
+    width: 313.24px;
+
+        .project-card{
+            top: 0;
+            height: 210px;
+            width: 230.24px;
+            background:$secondaryBlue;
+            border-radius: 5px;
+            display: flex;
+            flex-wrap: wrap;
+            place-content: center;
+            color: $white;
+            text-transform: uppercase;
+            position: absolute;
+
+            .card-circuit{
+                position: absolute;
+                height: 51.8px;
+                width: 61.14px;
+
+                object{
+                    height: 100%;
+                    width: 100%;
+                }
+
+                &.top-right{
+                    top:0;
+                    left:0;
+                    transform: rotate(180deg);
+                }
+
+                &.bottom-left {
+                    bottom: 0;
+                    right: 0;
+                }
+            }
+
+            &.second{
+                top:-20px;
+                left: 20px;
+                opacity: 0.8;
+                z-index: -1;
+            }
+    
+            &.last{
+                top:-40px;
+                left: 40px;
+                opacity: 0.6;
+                z-index: -2;
+            }
+
+            &.second , &.last{
+                border: none;
+                object{
+                    display: none;
+                }
+            }
+        }
+   }
+}

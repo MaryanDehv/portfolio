@@ -4,6 +4,7 @@
 @import 'helpers.scss';
 @import 'buttons.scss';
 @import 'home.scss';
+@import 'projects.scss';
 
 
 
@@ -101,6 +102,11 @@ body{
         height: calc(100% - 90px);
         padding: 20px 0px;
     }
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
 }
 
 

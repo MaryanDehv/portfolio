@@ -163,10 +163,6 @@ button.split-colour .blue {
 .logo > div {
   gap: 11px;
 }
-.logo p, .logo .desktop-image {
-  position: relative;
-  left: -14px;
-}
 
 .text-decor {
   width: 25%;
@@ -210,6 +206,66 @@ button.split-colour .blue {
 .mobile-circuit object {
   position: absolute;
   bottom: 0;
+}
+
+body.projects-page::after {
+  display: none;
+}
+body.projects-page [data-mobile-nav=false] .mobile-circuit {
+  display: none;
+}
+body.projects-page .projects-container {
+  height: 263px;
+  width: 313.24px;
+}
+body.projects-page .projects-container .project-card {
+  top: 0;
+  height: 210px;
+  width: 230.24px;
+  background: #134D5D;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  place-content: center;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  position: absolute;
+}
+body.projects-page .projects-container .project-card .card-circuit {
+  position: absolute;
+  height: 51.8px;
+  width: 61.14px;
+}
+body.projects-page .projects-container .project-card .card-circuit object {
+  height: 100%;
+  width: 100%;
+}
+body.projects-page .projects-container .project-card .card-circuit.top-right {
+  top: 0;
+  left: 0;
+  transform: rotate(180deg);
+}
+body.projects-page .projects-container .project-card .card-circuit.bottom-left {
+  bottom: 0;
+  right: 0;
+}
+body.projects-page .projects-container .project-card.second {
+  top: -20px;
+  left: 20px;
+  opacity: 0.8;
+  z-index: -1;
+}
+body.projects-page .projects-container .project-card.last {
+  top: -40px;
+  left: 40px;
+  opacity: 0.6;
+  z-index: -2;
+}
+body.projects-page .projects-container .project-card.second, body.projects-page .projects-container .project-card.last {
+  border: none;
+}
+body.projects-page .projects-container .project-card.second object, body.projects-page .projects-container .project-card.last object {
+  display: none;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -299,9 +355,18 @@ body main {
   padding: 20px 0px;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 @media only screen and (min-width: 1025px) {
   .mobile-image, .nav-icons {
     display: none;
+  }
+  p, .desktop-image {
+    position: relative;
+    left: -14px;
   }
 }
 @media only screen and (max-width: 1024px) {
@@ -344,6 +409,9 @@ body main {
   }
   [data-mobile-nav=true] ul li:after {
     display: none;
+  }
+  [data-mobile-nav=true] ul li.selected {
+    color: #3EC6AC;
   }
   [data-mobile-nav=true] ul:before {
     content: "";
