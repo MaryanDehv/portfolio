@@ -14,23 +14,24 @@
         text-transform: uppercase;
         font-size: 45px;
         font-weight: 600;
+        letter-spacing: 5px;
     }
 
     .developer{
         color:$white;
         top:48px;
-        left: -218px;
-        transform-origin: right;
+        left: 15px;
+        transform-origin: left;
 
         &{
-            transform: rotate(-90deg);
+            transform: rotate(90deg);
         }
     }
 
     .frontend{
         color: $black;
         bottom:48px;
-        right: 20px;
+        right: 15px;
         transform-origin: right;
 
          &{

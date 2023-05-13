@@ -171,20 +171,21 @@ button.split-colour .blue {
   text-transform: uppercase;
   font-size: 45px;
   font-weight: 600;
+  letter-spacing: 5px;
 }
 .text-decor .developer {
   color: #FFFFFF;
   top: 48px;
-  left: -218px;
-  transform-origin: right;
+  left: 15px;
+  transform-origin: left;
 }
 .text-decor .developer {
-  transform: rotate(-90deg);
+  transform: rotate(90deg);
 }
 .text-decor .frontend {
   color: #0E0E14;
   bottom: 48px;
-  right: 20px;
+  right: 15px;
   transform-origin: right;
 }
 .text-decor .frontend {

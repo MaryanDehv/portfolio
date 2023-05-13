@@ -10,24 +10,29 @@ function mobileNav(){
 
 
 mobileNav()
+const developer = 'developer';
+const frontend = 'frontend';
 
-
-function writeConsole(i){
-   const message = 'console.log("hello world")';
-   const container = document.querySelector('.console-message');
-   const arr = message.split('');
-   setTimeout(() => {
-      container.innerHTML += arr[i]
-      i++
-      if(i < arr.length){
-         writeConsole(i)
-      } else {
-         return
-      }
-   } , 100)
+function writeAnimation(i , target , container , delay){
+   const arr = target.split('');
+   (function write(){
+      setTimeout(() => {
+         container.innerHTML += arr[i]
+         i++
+         if(i < arr.length){
+            writeAnimation(i , target , container , delay)
+         } else {
+            return
+         }
+      } , delay)
+   })()
 }
 
-writeConsole(0)
+
+writeAnimation(0 , 'console.log("hello world")', document.querySelector('.console-message') , 250)
+writeAnimation(0 , 'developer' , document.querySelector('.developer') , 200)
+writeAnimation(0 , 'frontend' , document.querySelector('.frontend') , 200)
+
 
 
  // portfolio deck
