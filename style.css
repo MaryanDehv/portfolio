@@ -203,9 +203,9 @@ button.split-colour .blue {
 
 .mobile-circuit {
   height: 287px;
-  width: calc(100% + 92px);
+  width: calc(100% + 30px);
   position: relative;
-  left: -46px;
+  left: -15px;
 }
 .mobile-circuit object {
   position: absolute;
@@ -265,7 +265,7 @@ table {
 body {
   background: #0E0E14;
   position: relative;
-  padding: 0px 46px;
+  padding: 0px 15px;
   height: 100vh;
   min-height: 640px;
   overflow-y: scroll;
@@ -327,7 +327,6 @@ body main {
     display: none;
   }
   [data-mobile-nav=true] ul {
-    min-height: 760px;
     position: absolute;
     top: 0;
     width: 100%;
@@ -345,6 +344,11 @@ body main {
   }
   [data-mobile-nav=true] ul li:after {
     display: none;
+  }
+  [data-mobile-nav=true] ul:before {
+    content: "";
+    height: 150px;
+    width: 100%;
   }
   [data-mobile-nav=true] .mobile-circuit {
     z-index: 1;
