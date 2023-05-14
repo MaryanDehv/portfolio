@@ -279,6 +279,21 @@ body.projects-page .projects-container .project-card .card-circuit.bottom-left {
   bottom: 0;
   right: 0;
 }
+body.projects-page .projects-container .project-card .card-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+body.projects-page .projects-container .project-card .card-name > div {
+  background: #3EC6AC;
+  padding: 5px 30px;
+  display: flex;
+  place-content: center;
+  flex-wrap: wrap;
+  border-radius: 50px;
+  font-size: 16px;
+}
 @media only screen and (min-width: 1025px) {
   body.projects-page .projects-container .project-card.second {
     top: -20px;
