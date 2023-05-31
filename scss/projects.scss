@@ -32,6 +32,7 @@ body.projects-page{
    .projects-container{
     height: 263px;
     width: 313.24px;
+    position: relative;
 
     .projects-list{
         gap:10px;
@@ -41,8 +42,8 @@ body.projects-page{
     .project-card{
         cursor: pointer;
         top: 0;
-        height: 210px;
-        width: 230.24px;
+        height: 310px;
+        width: 330.24px;
         background:$secondaryBlue;
         border-radius: 5px;
         display: flex;
@@ -92,21 +93,26 @@ body.projects-page{
         }
         
         @media only screen and (min-width:1025px) {
-            &.second{
+
+            &:first-child{
+                z-index: 1;
+            }
+            
+            &:nth-last-child(2){
                 top:-20px;
                 left: 20px;
                 opacity: 0.8;
                 z-index: -1;
             }
 
-            &.last{
+            &:nth-last-child(1){
                 top:-40px;
                 left: 40px;
                 opacity: 0.6;
                 z-index: -2;
             }
 
-            &.second , &.last{
+            &:not(:first-child){
                 border: none;
                 object{
                     display: none;
@@ -136,8 +142,8 @@ body.projects-page{
             justify-content: space-between;
             gap:10px;
             position: absolute;
-            top: 10px;
-            right: -30px;
+            top: 60px;
+            right: -120px;
     
             >div{
                 width: 24px;

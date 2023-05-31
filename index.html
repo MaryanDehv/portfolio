@@ -46,6 +46,26 @@
             </div>
         </main>
         </div>
-        <script src="app.js"></script>
+        <script>
+            function writeAnimation(i , target , container , delay){
+                const arr = target.split('');
+                (function write(){
+                    setTimeout(() => {
+                        container.innerHTML += arr[i]
+                        i++
+                        if(i < arr.length){
+                        writeAnimation(i , target , container , delay)
+                        } else {
+                        return
+                        }
+                    } , delay)
+                })()
+            }
+
+
+            writeAnimation(0 , 'console.log("hello world")', document.querySelector('.console-message') , 100)
+            writeAnimation(0 , 'developer' , document.querySelector('.developer') , 200)
+            writeAnimation(0 , 'frontend' , document.querySelector('.frontend') , 200)
+        </script>
 </body>
 </html>

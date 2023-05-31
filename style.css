@@ -242,6 +242,7 @@ body.projects-page main {
 body.projects-page .projects-container {
   height: 263px;
   width: 313.24px;
+  position: relative;
 }
 body.projects-page .projects-container .projects-list {
   gap: 10px;
@@ -250,8 +251,8 @@ body.projects-page .projects-container .projects-list {
 body.projects-page .projects-container .project-card {
   cursor: pointer;
   top: 0;
-  height: 210px;
-  width: 230.24px;
+  height: 310px;
+  width: 330.24px;
   background: #134D5D;
   border-radius: 5px;
   display: flex;
@@ -295,22 +296,25 @@ body.projects-page .projects-container .project-card .card-name > div {
   font-size: 16px;
 }
 @media only screen and (min-width: 1025px) {
-  body.projects-page .projects-container .project-card.second {
+  body.projects-page .projects-container .project-card:first-child {
+    z-index: 1;
+  }
+  body.projects-page .projects-container .project-card:nth-last-child(2) {
     top: -20px;
     left: 20px;
     opacity: 0.8;
     z-index: -1;
   }
-  body.projects-page .projects-container .project-card.last {
+  body.projects-page .projects-container .project-card:nth-last-child(1) {
     top: -40px;
     left: 40px;
     opacity: 0.6;
     z-index: -2;
   }
-  body.projects-page .projects-container .project-card.second, body.projects-page .projects-container .project-card.last {
+  body.projects-page .projects-container .project-card:not(:first-child) {
     border: none;
   }
-  body.projects-page .projects-container .project-card.second object, body.projects-page .projects-container .project-card.last object {
+  body.projects-page .projects-container .project-card:not(:first-child) object {
     display: none;
   }
   body.projects-page .projects-container .project-card.moveback {
@@ -332,8 +336,8 @@ body.projects-page .projects-container .project-card .card-name > div {
     justify-content: space-between;
     gap: 10px;
     position: absolute;
-    top: 10px;
-    right: -30px;
+    top: 60px;
+    right: -120px;
   }
   body.projects-page .projects-container .directions > div {
     width: 24px;
