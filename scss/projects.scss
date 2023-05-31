@@ -55,8 +55,8 @@ body.projects-page{
 
         .card-circuit{
             position: absolute;
-            height: 51.8px;
-            width: 61.14px;
+            height: 81.8px;
+            width: 91.14px;
 
             object{
                 height: 100%;
@@ -97,7 +97,7 @@ body.projects-page{
             &:first-child{
                 z-index: 1;
             }
-            
+
             &:nth-last-child(2){
                 top:-20px;
                 left: 20px;
