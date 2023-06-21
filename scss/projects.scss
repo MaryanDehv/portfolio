@@ -1,3 +1,9 @@
+@mixin addAnimation($animation){
+    &.#{$animation}{
+        animation: $animation 0.8s forwards;
+    }
+}
+
 body.projects-page{
     [data-mobile-nav="false"]{
         .mobile-circuit{
@@ -117,19 +123,15 @@ body.projects-page{
                 object{
                     display: none;
                 }
-            }
+            } 
 
-            &.moveback{
-                animation: moveback 0.8s forwards;
+            @include addAnimation(moveback);
+            @include addAnimation(shiftup);
+            @include addAnimation(lastshiftup);
+
+            &.moveback.reverse , &.shiftup.reverse , &.lastshiftup.reverse{
+                animation-direction: reverse !important;
             }
-            
-            &.shiftup{
-                animation: shiftup 0.8s forwards;
-            }
-            
-            &.lastshiftup{
-                animation: lastshiftup 0.8s forwards;
-            }   
         }
     }
 
@@ -207,7 +209,6 @@ body.projects-page{
 @keyframes lastshiftup{
 
     0%{
-        opacity: 1;
         top:-40px;
         left: 40px;
     }
@@ -231,7 +232,6 @@ body.projects-page{
 
 @keyframes shiftup{
     0%{
-        opacity: 1;
         top:-20px;
         left: 20px;
     }

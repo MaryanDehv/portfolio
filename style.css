@@ -326,6 +326,9 @@ body.projects-page .projects-container .project-card .card-name > div {
   body.projects-page .projects-container .project-card.lastshiftup {
     animation: lastshiftup 0.8s forwards;
   }
+  body.projects-page .projects-container .project-card.moveback.reverse, body.projects-page .projects-container .project-card.shiftup.reverse, body.projects-page .projects-container .project-card.lastshiftup.reverse {
+    animation-direction: reverse !important;
+  }
 }
 @media only screen and (min-width: 1025px) {
   body.projects-page .projects-container .directions {
@@ -390,7 +393,6 @@ body.projects-page nav .nav-logo img {
 
 @keyframes lastshiftup {
   0% {
-    opacity: 1;
     top: -40px;
     left: 40px;
   }
@@ -409,7 +411,6 @@ body.projects-page nav .nav-logo img {
 }
 @keyframes shiftup {
   0% {
-    opacity: 1;
     top: -20px;
     left: 20px;
   }
